@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+        body {
+            background-color: black;
+        }
+      .container {
+        -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+        width: 100%;
+        height: 700%;
+      }
+
+      .stage {
+        width: 100%;
+        height: 100%;
+        transition: transform 2s;
+    transform-style: preserve-3d;
+      }
+        
+      #shape {
+        position: relative;
+        top: 250px;
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        transform-style: preserve-3d;
+      }
+
+      .plane {
+        position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    font-size: 125pt;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    transition:transform 2s, opacity 2s;
+      }
+
+      #shape {
+        animation: spin 6s infinite linear;
+      }
+
+      @keyframes spin {
+        from {
+            transform: rotateY(0);
+        }
+
+        to {
+            transform: rotateY(-360deg);
+        }
+      }
+
+      .cube > .one {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+    }
+
+    .cube > .two {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+    }
+
+    .cube > .three {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+    }
+
+    .cube > .four {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+    }
+
+    .cube > .five {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube > .six {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+    }
+
+
+    .cube > .seven {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+    }
+
+    .cube > .eight {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+    }
+
+    .cube > .nine {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+    }
+
+    .cube > .ten {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+    }
+
+    .cube > .eleven {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube > .twelve {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+    }
+      </style>
+    </head>
+    <body>
+       <div class="container">
+        <div class="stage">
+           <div id="shape" class="cube">
+            <div class="plane one">1</div>
+            <div class="plane two">2</div>
+            <div class="plane three">3</div>
+            <div class="plane four">4</div>
+            <div class="plane five">5</div>
+            <div class="plane six">6</div>
+            <div class="plane seven">7</div>
+            <div class="plane eight">8</div>
+            <div class="plane nine">9</div>
+            <div class="plane ten">10</div>
+            <div class="plane eleven">11</div>
+            <div class="plane twelve">12</div>
+
+           </div>
+        </div>
+       </div>
+    </body>
+</html>
